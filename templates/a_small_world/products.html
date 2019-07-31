@@ -1,0 +1,16 @@
+{% extends "a_small_world/base.html" %}
+
+{% block content %}
+
+<h1>Products</h1>
+
+<ul>
+    {% for product in product_name %}
+      <li> {{ product }}</li>
+    {% empty %}
+      <li>No products listed yet.</li>
+    {% endfor %}
+    </ul>
+
+
+{% endblock %}

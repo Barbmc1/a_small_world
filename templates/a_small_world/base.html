@@ -1,0 +1,26 @@
+{% block title %}
+
+{% endblock %}
+<p>
+  <a href="{% url 'a_small_world:index' %}">A Small World</a>
+ <!---- <a href="{% url 'a_small_world:catagories' %}">Catagories</a>
+  {% if user.is_authenticated %}
+    Hello, {{ user.username }}.
+    <a href="{% url 'users:logout' %}">log out</a> 
+  
+  {% endif %}--->
+  
+
+</p>
+
+{% block main %}
+
+{% endblock %}
+
+{% block sidebar %}
+
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block chart %}  {% endblock %}

@@ -1,0 +1,43 @@
+{% extends "a_small_world/base.html" %}
+
+{% block content %}
+
+<p>Welcome to A Small World!</p>
+
+<p>
+    Most poeple do not realize how complex and detailed a dolhouse can become.
+</p>
+
+<p>For example, take a look at <a href = "https://www.rct.uk/collection/themes/trails/queen-marys-dolls-house">
+    Queen Mary's Dolls' House.</a> Queen Mary's Dolls' House is the largest, most beautiful and most 
+    famous dolls' house in the world.
+</p>
+
+<p>In order to build such an elaberate masterpiece, the creator must have access to everything from building materials like
+    flooring and wallpapers, to furniture of all kinds, and the tiny accessories that bring
+    their 1/12 scale models to life!
+</p>
+
+<p>Finding all of these items can be quite a challange! Like any industry, materials are made by various
+    manufacturers and artists. The best solution is to find a miniature store in your area. The 
+    <a href =  "http://www.ministores.org/member-shops/">DMMA, or Dollhouse and Miniature Merchatns 
+    Association</a> has a map with all US based brick and morter stores. 
+</p>
+
+<p>If you are lucky enough to live in St. Louis, Missouri, and anywhere nearby, 
+    <a href = "http://www.mcgheesminiatures.com/">McGhee's Miniatures </a>is an incredible full line 
+    Dollhouse and Miniatures Store and Studio!
+</p>
+
+<p>To beigin our look into the tiny, but huge world of Dollhouses / Scale Modeling / and miniatures, let's break things 
+    down into different catagories.
+<UL>
+    <li><a href="{% url 'a_small_world:catagories' %}">Catagories</a></li>
+    <li><a href="{% url 'a_small_world:manufacturers' %}"> Manufacturers</a></li>
+    <li><a href="{% url 'a_small_world:distributors' %}">Distriubtors</a></li>
+    <li><a href="{% url 'a_small_world:products' %}">Products</a></li>
+    
+</UL>
+</p>
+
+{% endblock %}

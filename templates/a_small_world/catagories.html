@@ -1,0 +1,24 @@
+{% extends "a_small_world/base.html" %}
+
+{% block content %}
+<h1>Catagories</h1>
+
+
+<ul>
+{% for catagory in catagory_1 %}
+  <li> {{ catagory }}</li>
+{% empty %}
+  <li>No catagories listed yet.</li>
+{% endfor %}
+</ul>
+
+
+
+
+<p>This pie chart shows what percent of the poducts are in each catagory.
+</p>
+<!--<embed type = "image/svg" src = "/CatViews.svg" width='90'/>
+
+{{ CatViews|safe }}   --->
+
+{% endblock %}
