@@ -1,0 +1,32 @@
+{% extends "a_small_world/base.html" %}
+{% block content %}
+<script type="text/javascript" src="http://kozea.github.com/pygal.js/latest/pygal-tooltips.min.js">
+</script>
+
+<h1>Manufacturer</h1>
+<p> Manufacturers are the people who actually make the items.
+</p>
+<!--
+
+  <embed type="image/svg+xml" src="manuPie.svg" alt="ManuPie Chart" width=600>
+
+  {{ manuPie|safe }}
+-->
+{% load static %}
+<img src="{% static "a_small_world/manuPie.svg" %}" alt="Manufacturer's Pie Chart" width="600" height="400">
+<img src="{% static "a_small_world/manuPie2.svg" %}" alt="Manufacturer's 2 Pie Chart" width="600" height="400">
+<img src="{% static "a_small_world/manuPie3.svg" %}" alt="Manufacturer's  3 Pie Chart" width="600" height="400">
+{{ manuPie|safe }}
+<ul>
+    {% for manufacturer in manufacturer_name %}
+      <li> {{ manufacturer }}</li>
+    {% empty %}
+      <li>No manufacturers listed yet.</li>
+    {% endfor %}
+    </ul>
+
+
+
+
+
+{% endblock %}

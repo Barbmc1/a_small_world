@@ -1,0 +1,16 @@
+{% extends "a_small_world/base.html" %}
+
+{% block content %}
+
+<h1>Distributors</h1>
+
+<ul>
+    {% for distributor in distributor_name %}
+      <li> {{ distributor }}</li>
+    {% empty %}
+      <li>No Distributors listed yet.</li>
+    {% endfor %}
+    </ul>
+
+
+{% endblock %}
