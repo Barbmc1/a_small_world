@@ -4,7 +4,7 @@ from pygal.style import DarkStyle
 from pygal import Config
 
 
-filename = 'a_small_world/prods_by_manufacturer.csv'
+filename = 'prods_by_manufacturer.csv'
 
 """This will open and read the file, collecting all manufacturers & the number 
 of Products thet sell. A Pie chart showing each manufacturers percent of the 

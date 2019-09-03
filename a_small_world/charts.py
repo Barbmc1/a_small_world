@@ -1,11 +1,18 @@
 from django.db import models
+from .models import Catagories, Manufacturers, Distributors, Products
+from django.db.models import Count
+
 import pygal
 from pygal.style import DarkStyle
 from pygal import Config
 
-from .models import Catagories, Manufacturers, Distributors, Products
-from django.db.models import Count
 
+"""The following 3 queries, d, q, m all work. They have been 
+tested in the django shell. The issue now is taken the query set &
+feeding it to pygal to create a Pie chart. """
+
+#This command line query works!
+d = Distributors.objects.annotate(Count('products'))
 
 #This command line query works! 
 #Type q 'enter' to see the queryset <Catagories: DOLLS >,
@@ -46,7 +53,7 @@ manuPie.render_to_file('a_small_world/static/a_small_world/manuPie2.svg')
 
 
 
-d = Distributors.objects.annotate(Count('products'))
+
 
 
      

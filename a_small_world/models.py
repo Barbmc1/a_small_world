@@ -99,3 +99,8 @@ class Distributors(models.Model):
 
 
 
+class Catagory_1(models.Model):
+    """This is the result of the query from products by catagory."""
+
+
+

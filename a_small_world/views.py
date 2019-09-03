@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from .models import Catagories, Manufacturers, Distributors, Products
+from django.db.models import Count
 from .pieChart import ManuPieChart
 
 from django.contrib.auth import login, logout, authenticate
@@ -34,7 +35,7 @@ def manufacturers(request):
     manufacturer_name = Manufacturers.objects.order_by('manufacturer_name').distinct('manufacturer_name')
     context = {'manufacturer_name': manufacturer_name}
     return render(request, 'a_small_world/manufacturers.html', context)
-    return render(request, 'a_small_world/manuPie.svg', context)
+    #return render(request, 'a_small_world/manuPie.svg', context)
 
 
 def distributors(request):
